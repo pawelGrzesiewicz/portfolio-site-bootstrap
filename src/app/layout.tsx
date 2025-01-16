@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./globals.css";
-import InstallBootstrap from "../../componets/InstallBootstrap";
+import InstallBootstrap from "../utils/InstallBootstrap";
+import NavBar from "../componets/Navigation/NavBar";
+import Footer from "@/componets/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <InstallBootstrap/>
-        {children}
+        <NavBar/>
+          <main className="container-fluid">
+            {children}
+          </main>
+        <Footer/>
       </body>
     </html>
   );
