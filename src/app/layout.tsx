@@ -5,6 +5,7 @@ import "./globals.css";
 import InstallBootstrap from "../utils/InstallBootstrap";
 import NavBar from "../componets/Navigation/NavBar";
 import Footer from "@/componets/Footer";
+import ThemeContextProvider from "@/context/ThemeContextProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,15 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <InstallBootstrap/>
-        <NavBar/>
-          <main className="container-fluid">
-            {children}
-          </main>
-        <Footer/>
-      </body>
+    <html lang="en" data-bs-theme="dark">
+      <ThemeContextProvider>
+        <body>
+          <InstallBootstrap/>
+          <NavBar/>
+            <main className="container-fluid">
+              {children}
+            </main>
+          <Footer/>
+        </body>
+      </ThemeContextProvider>
     </html>
   );
 }

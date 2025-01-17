@@ -4,7 +4,7 @@ import SwitchDarkMode from './SwitchDarkMode'
 
 export default function NavBar() {
   return (
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
+<nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
     <Link href="/home">
       <button className="navbar-brand btn" aria-label="Go to Home">pawelGrzesiewicz</button>
