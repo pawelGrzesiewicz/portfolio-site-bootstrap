@@ -1,0 +1,42 @@
+{
+    "navLinks": {
+      "home": "Strona główna",
+      "about": "O mnie",
+      "projects": "Projekty",
+      "contact": "Kontakt"
+    },
+  
+    "home": {
+      "text-1": "Cześć !",
+      "text-2": "Jestem Paweł",
+      "text-3": "Jestem ",
+      "typed-text-1": "Twórcą stron internetowych",
+      "typed-text-2": "Projektantem stron internetowych"
+    },
+  
+    "getCv": "Pobierz CV",
+  
+    "about": {
+      "text-1": "O mnie",
+      "text-2": "Kim jestem ?",
+      "text-3": "Jestem Frontend Developerem",
+      "description" : "Po latach doskonalenia umiejętności jako menedżer techniczny i projektant, wreszcie pozwoliłem sobie zafascynować się programowaniem. Pisanie kodu sprawia mi radość. Uwielbiam rozwiązywać uparte błędy i doświadczać tych magicznych momentów oświecenia, kiedy po godzinach debugowania udaje mi się napisać tę jedną linię, która sprawia, że kod działa \uD83D\uDE09 Obecnie skupiam się na rozwijaniu umiejętności programowania w języku JavaScript i frameworku React/Next.js. To fascynujące środowisko, które daje mi możliwość tworzenia interaktywnych i dynamicznych aplikacji internetowych. Cieszę się, że mogę poszerzać moją wiedzę i zdobywać doświadczenie w świecie programowania."
+    },
+  
+    "projects": {
+      "text-1": "Ostatnie Projekty",
+      "text-2": "Zobacz więcej prac"
+    },
+  
+    "contact": {
+      "text-1": "Przywitaj się!",
+      "text-2": "Skontaktuj się ze mną",
+      "text-3": "Uwielbiam nawiązywać nowe kontakty z ludźmi.",
+      "text-4": "Napisz do mnie."
+    },
+  
+    "footer": {
+      "text-1": "Prawo autorskie",
+      "text-2": "Wszelkie prawa zastrzeżone."
+    }
+  }

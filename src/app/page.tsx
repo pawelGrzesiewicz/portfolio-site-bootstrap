@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
-import HomeHero from "../componets/HomeHero";
+import HomePage from "../componets/HomePage";
 
 export default function Home() {
   return (
-    <></>
+    <HomePage/>
   );
 }

@@ -1,0 +1,42 @@
+{
+    "navLinks": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+  
+    "home": {
+      "text-1": "Hi There !",
+      "text-2": "I'm Paweł",
+      "text-3": "I'm ",
+      "typed-text-1": "Web Developer",
+      "typed-text-2": "Web Designer"
+    },
+  
+    "getCv": "Download CV",
+  
+    "about": {
+      "text-1": "About Me",
+      "text-2": "Who am I ?",
+      "text-3": "I'm Frontend Developer",
+      "description" : "After years of honing my skills as a technical manager and designer, I finally let myself be captivated by programming. Writing code brings me joy. I love fixing stubborn bugs and experiencing those magical moments of enlightenment when, after hours of debugging, I manage to write that one line that makes the code work \uD83D\uDE09 Currently, I am focusing on developing programming skills in JavaScript and React/Next.js. It's a fascinating environment that gives me the opportunity to create interactive and dynamic web applications. I'm delighted to expand my knowledge and gain experience in the coding world."
+    },
+  
+    "projects": {
+      "text-1": "Latest projects",
+      "text-2": "View more works"
+    },
+  
+    "contact": {
+      "text-1": "Say hello!",
+      "text-2": "Contact me",
+      "text-3": "I love making new connections with people.",
+      "text-4": "Feel free to drop me an email."
+    },
+  
+    "footer": {
+      "text-1": "Copyright",
+      "text-2": "All Rights Reserved."
+    }
+  }
