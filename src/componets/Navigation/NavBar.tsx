@@ -2,22 +2,22 @@
 
 import Link from 'next/link'
 import React from 'react'
+import { useTranslations } from "next-intl";
 import SwitchDarkMode from './SwitchDarkMode'
 import SwitchLanguageMode from './SwitchLanguageMode'
-import { useTranslation } from 'react-i18next';
 
 type NavBarProps = {
   locale: string;
 };
 
 export default function NavBar ({ locale }: NavBarProps) {
-  const { t } = useTranslation("navLinks");
+  const t = useTranslations("navLinks");
 
   return (
 <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
     <Link href={`/${locale}/`}>
-      <button className="navbar-brand btn" aria-label="Go to Home">pawelGrzesiewicz</button>
+      <button className="navbar-brand btn" aria-label="Go to Home">pawełGrzesiewicz</button>
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

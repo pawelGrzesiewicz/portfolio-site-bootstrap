@@ -1,14 +1,21 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-
+import { usePathname, useRouter } from "next/navigation";
+import { ChangeEvent } from "react";
 
 type SwitchLanguageModeProps = {
   locale: string;
 };
 
 export default function SwitchLanguageMode({ locale }: SwitchLanguageModeProps) {
+  const pathname = usePathname();
+  const router = useRouter();
 
+  const handleLanguageChange = ((e: ChangeEvent<HTMLInputElement>) => {
+    const newLocate = e.target.value;
+    const path = pathname.replace(`/${locale}`, '');
+    router.push(`/${newLocate}/${path}`);
+  })
   return (
     <div id="modeSwitchContainer" className="btn-group btn-group-sm mx-4" role="group" aria-label="Toggle Mode">
       <input
@@ -16,11 +23,11 @@ export default function SwitchLanguageMode({ locale }: SwitchLanguageModeProps) 
         className="btn-check"
         name="btnradio"
         id="englishMode"
-        checked={locale === 'en'}
-        onChange={() => changeLocale('en')}
-      />
+        value="en"
+        onChange={handleLanguageChange}
+        />
       <label
-        className={`btn ${locale === 'en' ? 'btn-primary' : 'btn-outline-secondary'}`}
+        className={`btn btn-outline-secondary ${locale === 'en' ? 'bg-warning' : ''}`}
         htmlFor="englishMode"
       >
         EN
@@ -31,11 +38,11 @@ export default function SwitchLanguageMode({ locale }: SwitchLanguageModeProps) 
         className="btn-check"
         name="btnradio"
         id="polishMode"
-        checked={locale === 'pl'}
-        onChange={() => changeLocale('pl')}
-      />
+        value="pl"
+        onChange={handleLanguageChange}
+        />
       <label
-        className={`btn ${locale === 'pl' ? 'btn-primary' : 'btn-outline-secondary'}`}
+        className={`btn btn-outline-secondary ${locale === 'pl' ? 'bg-warning' : ''}`}
         htmlFor="polishMode"
       >
         PL

@@ -12,12 +12,13 @@ import "../globals.css";
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: { locale: 'pl' | 'en' };
 };
 
-export default async function RootLayout({ children, params: {locale} }: LayoutProps) { 
+export default async function RootLayout({ children, params }: LayoutProps) { 
+  const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
   const messages = await getMessages();
