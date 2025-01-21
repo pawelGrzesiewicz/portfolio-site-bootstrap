@@ -3,10 +3,11 @@
       "home": "Home",
       "about": "About",
       "projects": "Projects",
-      "contact": "Contact"
+      "contact": "Contact",
+      "blog": "Blog"
     },
   
-    "home": {
+    "HomePage": {
       "text-1": "Hi There !",
       "text-2": "I'm Paweł",
       "text-3": "I'm ",

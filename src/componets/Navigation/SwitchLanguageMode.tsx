@@ -1,34 +1,13 @@
 'use client';
 
-import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 
-export default function SwitchLanguageMode() {
-  const [locale, setLocale] = useState<string>('');
-  const router = useRouter();
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+type SwitchLanguageModeProps = {
+  locale: string;
+};
 
-    const cookieLocale = document.cookie
-      .split('; ')
-      .find((row) => row.startsWith('PORTFOLIOSIDE_LOCALE='))
-      ?.split('=')[1];
-    if (cookieLocale) {
-      setLocale(cookieLocale);
-    } else {
-      const browserLocale = navigator.language.slice(0, 2);
-      setLocale(browserLocale);
-      document.cookie = `PORTFOLIOSIDE_LOCALE=${browserLocale}`;
-      router.reload();
-    }
-  }, [router]);
-
-  const changeLocale = (newLocale: string) => {
-    setLocale(newLocale);
-    document.cookie = `PORTFOLIOSIDE_LOCALE=${newLocale}`;
-    router.reload();
-  };
+export default function SwitchLanguageMode({ locale }: SwitchLanguageModeProps) {
 
   return (
     <div id="modeSwitchContainer" className="btn-group btn-group-sm mx-4" role="group" aria-label="Toggle Mode">

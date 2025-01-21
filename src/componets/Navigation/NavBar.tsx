@@ -6,13 +6,17 @@ import SwitchDarkMode from './SwitchDarkMode'
 import SwitchLanguageMode from './SwitchLanguageMode'
 import { useTranslation } from 'react-i18next';
 
-export default function NavBar() {
-  const { t } = useTranslation();
+type NavBarProps = {
+  locale: string;
+};
+
+export default function NavBar ({ locale }: NavBarProps) {
+  const { t } = useTranslation("navLinks");
 
   return (
 <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
-    <Link href="/">
+    <Link href={`/${locale}/`}>
       <button className="navbar-brand btn" aria-label="Go to Home">pawelGrzesiewicz</button>
     </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,21 +27,21 @@ export default function NavBar() {
        <Link href="/">
          <button className="nav-link" aria-label="Go to Home">{t('home')}</button>
        </Link>
-       <Link href="/about">
-         <button className="nav-link" aria-label="Go to About">About</button>
+       <Link href={`/${locale}/about`}>
+         <button className="nav-link" aria-label="Go to About">{t("about")}</button>
        </Link>
-       <Link href="/projects">
-         <button className="nav-link" aria-label="Go to Projects">Projects</button>
+       <Link href={`/${locale}/projects`}>
+         <button className="nav-link" aria-label="Go to Projects">{t("projects")}</button>
        </Link>
-       <Link href="/contact">
-         <button className="nav-link" aria-label="Go to Contact">Contact</button>
+       <Link href={`/${locale}/contact`}>
+         <button className="nav-link" aria-label="Go to Contact">{t("contact")}</button>
        </Link>
-       <Link href="/blog">
-         <button className="nav-link disabled" aria-label="Blog (currently unavailable)">Blog</button>
+       <Link href={`/${locale}/blog`}>
+         <button className="nav-link disabled" aria-label="Blog (currently unavailable)">{t("blog")}</button>
        </Link>
       </ul>
       <SwitchDarkMode/>
-      <SwitchLanguageMode/>
+      <SwitchLanguageMode locale={locale}/>
     </div>
   </div>
 </nav>

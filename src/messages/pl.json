@@ -3,10 +3,11 @@
       "home": "Strona główna",
       "about": "O mnie",
       "projects": "Projekty",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "blog": "Blog"
     },
   
-    "home": {
+    "HomePage": {
       "text-1": "Cześć !",
       "text-2": "Jestem Paweł",
       "text-3": "Jestem ",
