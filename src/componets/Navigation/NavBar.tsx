@@ -5,45 +5,64 @@ import React from 'react'
 import { useTranslations } from "next-intl";
 import SwitchDarkMode from './SwitchDarkMode'
 import SwitchLanguageMode from './SwitchLanguageMode'
+import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 
 type NavBarProps = {
   locale: string;
 };
 
-export default function NavBar ({ locale }: NavBarProps) {
-  const t = useTranslations("navLinks");
+export default function NavBar({ locale }: NavBarProps) {
+  const t = useTranslations("NavbarLinks");
 
   return (
-<nav className="navbar navbar-expand-lg">
-  <div className="container-fluid">
-    <Link href={`/${locale}/`}>
-      <button className="navbar-brand btn" aria-label="Go to Home">pawełGrzesiewicz</button>
-    </Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav mx-auto">
-       <Link href="/">
-         <button className="nav-link" aria-label="Go to Home">{t('home')}</button>
-       </Link>
-       <Link href={`/${locale}/about`}>
-         <button className="nav-link" aria-label="Go to About">{t("about")}</button>
-       </Link>
-       <Link href={`/${locale}/projects`}>
-         <button className="nav-link" aria-label="Go to Projects">{t("projects")}</button>
-       </Link>
-       <Link href={`/${locale}/contact`}>
-         <button className="nav-link" aria-label="Go to Contact">{t("contact")}</button>
-       </Link>
-       <Link href={`/${locale}/blog`}>
-         <button className="nav-link disabled" aria-label="Blog (currently unavailable)">{t("blog")}</button>
-       </Link>
-      </ul>
-      <SwitchDarkMode/>
-      <SwitchLanguageMode locale={locale}/>
-    </div>
-  </div>
-</nav>
+    <>
+      <Navbar expand="lg" className="bg-body-tertiary mb-3">
+        <Container fluid>
+          <Link href={`/${locale}/`} aria-label="Go to Home" className="nav-link">
+            <span className="text-tertiary">pawel</span>
+            <span className="text-gradient fw-bold">Grzesiewicz</span>
+          </Link>
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
+          <Navbar.Offcanvas
+            id={`offcanvasNavbar-expand-lg`}
+            aria-labelledby={`offcanvasNavbarLabel-expand-lg`}
+            placement="end"
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
+                <Link href={`/${locale}/`} aria-label="Go to Home" className="nav-link">
+                  <span className="text-tertiary">pawel</span>
+                  <span className="text-gradient fw-bold">Grzesiewicz</span>
+                </Link>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Link href={`/${locale}/`} className="nav-link" aria-label="Go to Home">
+                  {t('home')}
+                </Link>
+                <Link 
+                href={`/${locale}/about`} className="nav-link" aria-label="Go to About">
+                  {t("about")}
+                </Link>
+                <Link href={`/${locale}/projects`} className="nav-link" aria-label="Go to Projects">
+                  {t("projects")}
+                </Link>
+                <Link href={`/${locale}/contact`} className="nav-link" aria-label="Go to Contact">
+                  {t("contact")}
+                </Link>
+                <Link href={`/${locale}/blog`} className="nav-link disabled" aria-label="Blog (currently unavailable)">
+                  {t("blog")}
+                </Link>
+              </Nav>
+              <div className="ms-auto d-flex align-items-center gap-3">
+                <SwitchDarkMode />
+                <SwitchLanguageMode locale={locale} />
+              </div>
+            </Offcanvas.Body>
+          </Navbar.Offcanvas>
+        </Container>
+      </Navbar>
+    </>
   )
 }

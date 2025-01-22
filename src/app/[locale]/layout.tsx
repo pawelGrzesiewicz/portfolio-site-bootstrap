@@ -9,11 +9,19 @@ import Footer from "@/componets/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "../globals.css";
+import { Container } from "react-bootstrap";
 
 type LayoutProps = {
   children: React.ReactNode;
   params: { locale: 'pl' | 'en' };
 };
+
+export async function generateMetadata() {
+  return {
+    title: "pawelGrzesiewicz",
+    description: "Welcome to my personal portfolio website.",
+  };
+}
 
 export default async function RootLayout({ children, params }: LayoutProps) { 
   const { locale } = await params;
@@ -31,7 +39,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
               <InstallBootstrap/>
               <NavBar locale={locale}/>
                 <main className="container-fluid">
-                  {children}
+                  <Container>{children}</Container>
                 </main>
               <Footer/>
             </ThemeContextProvider>

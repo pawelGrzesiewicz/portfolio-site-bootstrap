@@ -2,6 +2,7 @@
 
 import { ThemeContext } from '@/context/ThemeContextProvider';
 import React, { useContext, useEffect, useState } from 'react'
+import { Button, ButtonGroup } from 'react-bootstrap';
 
 export default function SwitchDarkMode() {
   const { toggleTheme } = useContext(ThemeContext);
@@ -13,43 +14,27 @@ export default function SwitchDarkMode() {
     setIsDark(isDarkStorage);
   }, [isDark]);
 
-  function toggle(newTheme: 'dark' | 'light') {
+  function hanleThemeChange(newTheme: "dark" | "light") {
     toggleTheme(newTheme);
-    setIsDark(newTheme === 'dark');
+    setIsDark(newTheme === "dark");
   }
 
   return (
-    <div id="modeSwitchContainer" className="btn-group btn-group-sm mx-4" role="group" aria-label="Toggle Mode">
-      <input
-        type="radio"
-        className="btn-check"
-        name="btnradio"
-        id="darkMode"
-        checked={isDark}
-        onChange={() => toggle('dark')}
-      />
-      <label         
-        className={`btn ${isDark ? 'btn-outline-light' : 'btn-outline-dark'}`}
-        htmlFor="darkMode"
+    <ButtonGroup size="sm" aria-label="Toggle dark mode">
+      <Button
+        variant="outline-secondary"
+        className={`${isDark === true ? 'bg-secondary' : ''}`}
+        onClick={() => hanleThemeChange("dark")}
       >
-        <i className="bi bi-moon"></i>
-      </label>
-
-      <input
-        type="radio"
-        className="btn-check"
-        name="btnradio"
-        id="lightMode"
-        checked={!isDark}
-        onChange={() => toggle('light')}
-      />
-      <label 
-        className={`btn ${isDark ? 'btn-outline-light' : 'btn-outline-dark'}`}
-        htmlFor="lightMode"
+        <i className={`bi bi-moon ${isDark === true ? 'text-warning' : ''}`}></i>
+      </Button>
+      <Button
+        variant="outline-secondary"
+        className={`${isDark === false ? 'bg-secondary' : ''}`}
+        onClick={() => hanleThemeChange("light")}
       >
-        <i className="bi bi-brightness-high"></i>
-      </label>
-    </div>
+        <i className={`bi bi-brightness-high ${isDark === false ? 'text-warning' : ''}`}></i>
+      </Button>
+    </ButtonGroup>
   )
 }
- 

@@ -1,10 +1,15 @@
 {
-    "navLinks": {
+    "NavbarLinks": {
       "home": "Strona główna",
+      "homeTitle": "Strona główna",
       "about": "O mnie",
+      "aboutTitle": "Strona o mnie",
       "projects": "Projekty",
+      "projectsTitle": "Strona projektów",
       "contact": "Kontakt",
-      "blog": "Blog"
+      "contactTitle": "Strona kontaktowa",
+      "blog": "Blog",
+      "blogTitle": "Strona bloga"
     },
   
     "HomePage": {
@@ -17,26 +22,26 @@
   
     "getCv": "Pobierz CV",
   
-    "about": {
+    "AboutPage": {
       "text-1": "O mnie",
       "text-2": "Kim jestem ?",
       "text-3": "Jestem Frontend Developerem",
       "description" : "Po latach doskonalenia umiejętności jako menedżer techniczny i projektant, wreszcie pozwoliłem sobie zafascynować się programowaniem. Pisanie kodu sprawia mi radość. Uwielbiam rozwiązywać uparte błędy i doświadczać tych magicznych momentów oświecenia, kiedy po godzinach debugowania udaje mi się napisać tę jedną linię, która sprawia, że kod działa \uD83D\uDE09 Obecnie skupiam się na rozwijaniu umiejętności programowania w języku JavaScript i frameworku React/Next.js. To fascynujące środowisko, które daje mi możliwość tworzenia interaktywnych i dynamicznych aplikacji internetowych. Cieszę się, że mogę poszerzać moją wiedzę i zdobywać doświadczenie w świecie programowania."
     },
   
-    "projects": {
+    "ProjectsPage": {
       "text-1": "Ostatnie Projekty",
       "text-2": "Zobacz więcej prac"
     },
   
-    "contact": {
+    "ContactPage": {
       "text-1": "Przywitaj się!",
       "text-2": "Skontaktuj się ze mną",
       "text-3": "Uwielbiam nawiązywać nowe kontakty z ludźmi.",
       "text-4": "Napisz do mnie."
     },
   
-    "footer": {
+    "Footer": {
       "text-1": "Prawo autorskie",
       "text-2": "Wszelkie prawa zastrzeżone."
     }
