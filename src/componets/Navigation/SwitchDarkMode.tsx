@@ -10,11 +10,14 @@ export default function SwitchDarkMode() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const isDarkStorage = localStorage.getItem('theme') === 'dark';
-    setIsDark(isDarkStorage);
-  }, [isDark]);
+    // Pobierz zapisany temat z localStorage lub ustaw "light" jako domyślny
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setIsDark(savedTheme === 'dark');
+    toggleTheme(savedTheme as "dark" | "light"); // Ustaw temat przy załadowaniu
+  }, [toggleTheme]);
 
-  function hanleThemeChange(newTheme: "dark" | "light") {
+  function handleThemeChange(newTheme: "dark" | "light") {
+    localStorage.setItem('theme', newTheme);
     toggleTheme(newTheme);
     setIsDark(newTheme === "dark");
   }
@@ -24,14 +27,14 @@ export default function SwitchDarkMode() {
       <Button
         variant="outline-secondary"
         className={`${isDark === true ? 'bg-secondary' : ''}`}
-        onClick={() => hanleThemeChange("dark")}
+        onClick={() => handleThemeChange("dark")}
       >
         <i className={`bi bi-moon ${isDark === true ? 'text-warning' : ''}`}></i>
       </Button>
       <Button
         variant="outline-secondary"
         className={`${isDark === false ? 'bg-secondary' : ''}`}
-        onClick={() => hanleThemeChange("light")}
+        onClick={() => handleThemeChange("light")}
       >
         <i className={`bi bi-brightness-high ${isDark === false ? 'text-warning' : ''}`}></i>
       </Button>

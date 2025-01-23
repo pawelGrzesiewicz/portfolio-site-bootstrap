@@ -16,12 +16,14 @@ export default function NavBar({ locale }: NavBarProps) {
 
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary mb-3">
-        <Container fluid>
-          <Link href={`/${locale}/`} aria-label="Go to Home" className="nav-link">
+      <Navbar expand="lg" className="mb-3">
+        <Container>
+        <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
+
             <span className="text-tertiary">pawel</span>
             <span className="text-gradient fw-bold">Grzesiewicz</span>
-          </Link>
+            </Offcanvas.Title>
+
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-lg`} />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-lg`}
@@ -30,10 +32,8 @@ export default function NavBar({ locale }: NavBarProps) {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
-                <Link href={`/${locale}/`} aria-label="Go to Home" className="nav-link">
                   <span className="text-tertiary">pawel</span>
                   <span className="text-gradient fw-bold">Grzesiewicz</span>
-                </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
