@@ -1,26 +1,35 @@
 .text-gradient {
-    background: radial-gradient(
-            64.18% 64.18% at 71.16% 35.69%,
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%,
             #f5f2ec 0.89%,
             #efe2bb 17.23%,
             #f1d788 42.04%,
             #f3cf63 55.12%,
             #f5c534 71.54%,
-            #f3b807 100%
-    );
+            #f3b807 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
 }
 
 
 .bg-black-gradient {
-    background: radial-gradient(
-            circle,
+    background: radial-gradient(circle,
             rgba(255, 255, 255, 1) -600%,
-            rgba(3,3,3,1) 100%
-    );
+            rgba(3, 3, 3, 1) 100%);
+}
+
+@media (min-width: 576px) {
+    .bg-face-web {
+        background: url(/bg.jpg) center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 575px) {
+    .bg-face-mobile {
+        background: url(/bg-mobile.jpg) center;
+        background-size: cover;
+    }
 }
 
 .navbar-toggler {
@@ -28,23 +37,23 @@
     font-size: 1.25rem;
 }
 
-.navbar-toggler:focus, 
+.navbar-toggler:focus,
 .btn-close:focus {
     box-shadow: none;
     outline: none;
-  }
+}
 
 .nav-link {
     font-weight: 500;
     position: relative;
-  }
+}
 
-.nav-link.active, 
+.nav-link.active,
 .nav-link:focus {
     color: #f3b807;
 }
 
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .nav-link::before {
         content: "";
         position: absolute;
@@ -56,21 +65,21 @@
         background-color: #f3b807;
         visibility: hidden;
         transition: 0.3s ease-in-out;
-     }
-    
-     .nav-link:hover::before, 
-     .nav-link:active::before {
+    }
+
+    .nav-link:hover::before,
+    .nav-link:active::before {
         width: 100%;
         visibility: visible;
-     }
-  }
+    }
+}
 
-  @media (max-width: 991px) {
+@media (max-width: 991px) {
     .nav-link::before {
         content: none;
     }
 
-    .nav-link:hover, 
+    .nav-link:hover,
     .nav-link:active {
         color: #f3b807;
     }
