@@ -14,8 +14,8 @@ export default function TechnologyIcons() {
                         src={tech.icon}
                         alt={tech.name}
                         title={tech.name}
-                        className="img-fluid text-dark"
-                        style={{ width: "25px", height: "25px" }}
+                        className="tech-icon"
+                        style={{ width: "25px", height: "25px", }}
                     />
                 </Col>
             ))}

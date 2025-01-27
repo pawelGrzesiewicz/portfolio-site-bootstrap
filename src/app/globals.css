@@ -19,19 +19,35 @@
 }
 
 @media (min-width: 576px) {
-    .bg-face-web {
-        background: url(/bg.jpg) center;
+
+    html[data-bs-theme='light'] .bg-face-web {
+        background: url('/me.jpeg') center;
+        background-size: cover;
+    }
+    html[data-bs-theme='dark'] .bg-face-web {
+        background: url('/bg.jpg') center;
         background-size: cover;
     }
 }
 
 @media (max-width: 575px) {
-    .bg-face-mobile {
-        background: url(/bg-mobile.jpg) center;
+    html[data-bs-theme='dark'] .bg-face-mobile {
+        background: url('/bg.jpg') center;
+        background-size: cover;
+    }
+    html[data-bs-theme='light'] .bg-face-mobile {
+        background: url('/bg.jpg') center;
         background-size: cover;
     }
 }
 
+html[data-bs-theme='light'] .tech-icon {
+    filter: invert(100%);
+}
+
+html[data-bs-theme='dark'] .tech-icon {
+    filter: invert(0%);
+}
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;

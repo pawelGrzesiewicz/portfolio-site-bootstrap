@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useEffect, useMemo, useState } from 'react';
+import { createContext, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -17,22 +17,28 @@ export const ThemeContext = createContext<ThemeContextType>({
 function ThemeContextProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
 
-  function changeTheme(value: Theme) {
+  const changeTheme = useCallback((value: Theme) => {
     const root = document.querySelector('html');
     if (root) {
-        root.setAttribute('data-bs-theme', value);
+      root.setAttribute('data-bs-theme', value);
     }
     setTheme(value);
-  }
-
-  useEffect(() => {
-    const themeStorage: Theme = localStorage.getItem('theme') as Theme;
   }, []);
 
-  function toggleTheme(mode: Theme) {
-    changeTheme(mode);
-    localStorage.setItem('theme', mode);
-  }
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      changeTheme(savedTheme);
+    }
+  }, [changeTheme]);
+
+  const toggleTheme = useCallback(
+    (mode: Theme) => {
+      changeTheme(mode);
+      localStorage.setItem('theme', mode);
+    },
+    [changeTheme],
+  );
 
   const contextValue = useMemo(
     () => ({
