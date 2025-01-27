@@ -37,43 +37,53 @@ export const socialMedia = [
 export const technologyStack = [
     {
         id: "technology-stack-1",
-        icon: html
+        icon: "/html.svg",
+        name: "html"
     },
     {
         id: "technology-stack-2",
-        icon: css
+        icon: "/css.svg",
+        name: "css"
     },
     {
         id: "technology-stack-3",
-        icon: sass
+        icon: "/sass.svg",
+        name: "sass"
     },
     {
         id: "technology-stack-4",
-        icon: tailwind
+        icon: "/tailwind.svg",
+        name: "tailwindCSS"
     },
     {
         id: "technology-stack-5",
-        icon: js
+        icon: "/js.svg",
+        name: "javascript"
     },
     {
         id: "technology-stack-6",
-        icon: ts
+        icon: "/ts.svg",
+        name: "typescript"
     },
     {
         id: "technology-stack-7",
-        icon: react
+        icon: "/react.svg",
+        name: "react.js"
     },
     {
         id: "technology-stack-8",
-        icon: next
+        icon: "/next.svg",
+        name: "next.js"
     },
     {
         id: "technology-stack-9",
-        icon: cypress
+        icon: "/cypress.svg",
+        name: "cypres.js"
     },
     {
         id: "technology-stack-10",
-        icon: storybook
+        icon: "/storybook.svg",
+        name: "storybook"
     },
 ];
 

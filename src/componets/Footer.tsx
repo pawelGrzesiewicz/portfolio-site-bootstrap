@@ -1,9 +1,10 @@
 import { socialMedia } from '@/constants/constants'
 import React from 'react'
+import { Container } from 'react-bootstrap'
 
 export default function Footer() {
     return (
-        <div className='container'>
+        <Container fluid="xxl" className='py-3 position-absolute bottom-0'>
             <div className=''>
                 <p className="">
                      Ⓒ 2023 pawelGrzesiewicz.
@@ -11,7 +12,7 @@ export default function Footer() {
             </div>
 
 
-            <div className='bg-success'>
+            <div className=''>
                 <div className=''>
                     {socialMedia.map((social) => (
                         <a key={social.id} href={social.link} target="_blank" rel="noopener noreferrer"
@@ -23,6 +24,6 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
-        </div>
+            </Container>
     )
 }
