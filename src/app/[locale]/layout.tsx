@@ -32,12 +32,12 @@ export default async function RootLayout({ children, params }: LayoutProps) {
 
   return (
     <html lang={locale}>
-      <body className='d-flex flex-column min-vh-100 overflow-hidden position-relative'>
+      <body className='d-flex flex-column min-vh-100 bg-face-web bg-face-mobile'>
         <NextIntlClientProvider messages={messages}>
           <ThemeContextProvider>
             <InstallBootstrap />
             <NavBar locale={locale} />
-            <main className='flex-grow-1 bg-face-web bg-face-mobile'>
+            <main className='d-flex flex-grow-1 justify-content-center align-items-center pt-5'>
               {children}
             </main>
             <Footer />

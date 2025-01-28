@@ -42,7 +42,6 @@
     },
   
     "Footer": {
-      "text-1": "Copyright",
-      "text-2": "All Rights Reserved."
+      "text": "All Rights Reserved."
     }
   }

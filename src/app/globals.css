@@ -24,6 +24,7 @@
         background: url('/me.jpeg') center;
         background-size: cover;
     }
+
     html[data-bs-theme='dark'] .bg-face-web {
         background: url('/bg.jpg') center;
         background-size: cover;
@@ -35,6 +36,7 @@
         background: url('/bg.jpg') center;
         background-size: cover;
     }
+
     html[data-bs-theme='light'] .bg-face-mobile {
         background: url('/bg.jpg') center;
         background-size: cover;
@@ -48,6 +50,7 @@ html[data-bs-theme='light'] .tech-icon {
 html[data-bs-theme='dark'] .tech-icon {
     filter: invert(0%);
 }
+
 .navbar-toggler {
     border: none;
     font-size: 1.25rem;
@@ -99,4 +102,19 @@ html[data-bs-theme='dark'] .tech-icon {
     .nav-link:active {
         color: #f3b807;
     }
+}
+
+.tech-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.social-icon {
+    color: #f3b807;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
 }
