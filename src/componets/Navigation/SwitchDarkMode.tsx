@@ -10,10 +10,9 @@ export default function SwitchDarkMode() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Pobierz zapisany temat z localStorage lub ustaw "light" jako domyślny
     const savedTheme = localStorage.getItem('theme') || 'light';
     setIsDark(savedTheme === 'dark');
-    toggleTheme(savedTheme as "dark" | "light"); // Ustaw temat przy załadowaniu
+    toggleTheme(savedTheme as "dark" | "light");
   }, [toggleTheme]);
 
   function handleThemeChange(newTheme: "dark" | "light") {

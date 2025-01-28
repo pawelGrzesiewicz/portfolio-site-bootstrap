@@ -10,7 +10,7 @@ export default function Footer() {
     return (
         <Container fluid="xxl" className="py-3">
             <Row className="align-items-center">
-                <Col className="text-center text-md-start">
+                <Col className="text-center text-md-start text-body-secondary">
                     <p className="mb-0 d-none d-sm-flex">
                         &copy; 2025 pawelGrzesiewicz.&nbsp;
                         <span className='d-none d-md-flex'>{t('text')}</span>
