@@ -20,13 +20,12 @@
       "typed-text-2": "Web Designer"
     },
   
-    "getCv": "Download CV",
-  
     "AboutPage": {
       "text-1": "About Me",
       "text-2": "Who am I ?",
       "text-3": "I'm Frontend Developer",
-      "description" : "After years of honing my skills as a technical manager and designer, I finally let myself be captivated by programming. Writing code brings me joy. I love fixing stubborn bugs and experiencing those magical moments of enlightenment when, after hours of debugging, I manage to write that one line that makes the code work \uD83D\uDE09 Currently, I am focusing on developing programming skills in JavaScript and React/Next.js. It's a fascinating environment that gives me the opportunity to create interactive and dynamic web applications. I'm delighted to expand my knowledge and gain experience in the coding world."
+      "description" : "After years of honing my skills as a technical manager and designer, I finally let myself be captivated by programming. Writing code brings me joy. I love fixing stubborn bugs and experiencing those magical moments of enlightenment when, after hours of debugging, I manage to write that one line that makes the code work \uD83D\uDE09 Currently, I am focusing on developing programming skills in JavaScript and React/Next.js. It's a fascinating environment that gives me the opportunity to create interactive and dynamic web applications. I'm delighted to expand my knowledge and gain experience in the coding world.",
+      "getCv": "Download CV"
     },
   
     "ProjectsPage": {
