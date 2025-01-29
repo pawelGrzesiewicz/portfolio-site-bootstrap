@@ -9,7 +9,7 @@ export default function About() {
   const t = useTranslations("AboutPage");
 
   return (
-    <Container>
+    <Container fluid="xxl">
       <Row>
         <Col xs={12} md={8} xl={6} className="text-start">
           <h2>{t('text-1')}</h2>
