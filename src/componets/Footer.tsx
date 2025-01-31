@@ -16,7 +16,7 @@ export default function Footer() {
                         <span className='d-none d-md-flex'>{t('text')}</span>
                     </p>
                 </Col>
-                <Col className="text-end mx-1">
+                <Col className="text-end">
                     {socialMedia.map((social) => (
                         <Link
                             key={social.id}

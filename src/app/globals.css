@@ -19,15 +19,16 @@
 }
 
 @media (min-width: 576px) {
-
     html[data-bs-theme='light'] .bg-face-web {
         background: url('/me.jpeg') center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     html[data-bs-theme='dark'] .bg-face-web {
         background: url('/bg.jpg') center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -35,11 +36,13 @@
     html[data-bs-theme='dark'] .bg-face-mobile {
         background: url('/bg.jpg') center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 
     html[data-bs-theme='light'] .bg-face-mobile {
         background: url('/bg.jpg') center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
