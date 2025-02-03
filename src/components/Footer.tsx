@@ -23,7 +23,7 @@ export default function Footer() {
                             href={social.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mx-3"
+                            className="mx-2 mx-sm-3"
                         >
                             {social.name === 'github' && <i className="bi bi-github fs-4 social-icon"></i>}
                             {social.name === 'codewars' && <i className="bi bi-flower1 fs-4 social-icon"></i>}
