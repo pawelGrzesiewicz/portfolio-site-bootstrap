@@ -28,7 +28,7 @@ export default function Projects() {
     <Container fluid="xxl">
       <Row className="text-center mb-2">
         <Col sm={8} md={10} lg={8} >
-          <h2 className="fw-bold">{t('heading')}</h2>
+          <h1>{t('heading')}</h1>
           <div className="d-flex d-md-none align-items-center justify-content-center gap-3 text-gradient">
             <p className="mb-0">{t('sub-heading')}</p>
             <i className="bi bi-hand-index-thumb-fill text-gradient position-relative animated-arrow"></i>
