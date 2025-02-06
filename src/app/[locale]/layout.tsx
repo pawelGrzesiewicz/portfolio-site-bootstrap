@@ -8,7 +8,7 @@ import NavBar from "@/components/navigation/NavBar";
 import Footer from "@/components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import "../main.scss";
+import "../scss/main.scss";
 
 type LayoutProps = {
   children: React.ReactNode;

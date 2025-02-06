@@ -77,7 +77,7 @@ export const projects = [
         webLink: "https://placeforfamily.netlify.app",
         githubLink: "https://github.com/pawelGrzesiewicz/Place_for_family",
         stack: ["/sass.svg", "/js.svg", "/react.svg"],
-        description: `The Entertainment Finder is a dynamic web application built with React...`
+        descriptionKey: "placeForFamily"
     },
     {
         id: "project-2",
@@ -86,7 +86,7 @@ export const projects = [
         webLink: "https://modernbankappstyles.netlify.app/",
         githubLink: "https://github.com/pawelGrzesiewicz/bank_modern_app",
         stack: ["/tailwind.svg", "/js.svg", "/react.svg"],
-        description: 'Lorem ipsum dolor sit amet...'
+        descriptionKey: "hooBank"
     },
     {
         id: "project-3",
@@ -95,7 +95,7 @@ export const projects = [
         webLink: "https://best-shop-rwd.netlify.app//",
         githubLink: "https://github.com/pawelGrzesiewicz/Best_Shop_RWD",
         stack: ["/sass.svg", "/js.svg"],
-        description: 'Lorem ipsum dolor sit amet...'
+        descriptionKey: "bestShop"
     },
     {
         id: "project-4",
@@ -104,7 +104,7 @@ export const projects = [
         webLink: "https://to-dos-mvc.netlify.app",
         githubLink: "https://github.com/pawelGrzesiewicz/todo_mvc",
         stack: ["/sass.svg", "/js.svg", "/react.svg"],
-        description: 'The project is a React-based to-do list application...'
+        descriptionKey: "toDo"
     },
     {
         id: "project-5",
@@ -113,7 +113,7 @@ export const projects = [
         webLink: "https://modern-gpt-design.netlify.app/",
         githubLink: "https://github.com/pawelGrzesiewicz/GPT-3",
         stack: ["/css.svg", "/js.svg", "/react.svg"],
-        description: '',
+        descriptionKey: "gpt3"
     },
     {
         id: "project-6",
@@ -122,6 +122,6 @@ export const projects = [
         webLink: "https://restaurant-ger.netlify.app/",
         githubLink: "https://github.com/pawelGrzesiewicz/Gerich_restaurant",
         stack: ["/css.svg", "/js.svg", "/react.svg"],
-        description: '',
+        descriptionKey: "gerichtRestaurant"
     },
 ];

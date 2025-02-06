@@ -25,18 +25,19 @@ export default function Projects() {
   }, []);
 
   return (
-    <Container fluid="xxl" className='my-auto'>
+    <Container fluid="xxl">
       <Row className="text-center mb-2">
-        <Col md={8}>
-          <h2 className="fw-bold">{t('text-1')}</h2>
-          <div className="d-flex align-items-center justify-content-center">
-            <p className="mb-0">{t('text-2')}</p>
+        <Col sm={8} md={10} lg={8} >
+          <h2 className="fw-bold">{t('heading')}</h2>
+          <div className="d-flex d-md-none align-items-center justify-content-center gap-3 text-gradient">
+            <p className="mb-0">{t('sub-heading')}</p>
+            <i className="bi bi-hand-index-thumb-fill text-gradient position-relative animated-arrow"></i>
           </div>
         </Col>
       </Row>
 
       <Row className='d-flex justify-content-start p-sm-3'>
-        <Col md={8} className="position-relative">
+        <Col sm={8} md={10} lg={8} className="position-relative">
           <i className="bi bi-arrow-left-square fs-2 swiper-prev position-absolute start-0 top-50 translate-middle-y cursor-pointer d-none d-md-block social-icon"></i>
           <Swiper
             spaceBetween={30}
@@ -54,7 +55,7 @@ export default function Projects() {
                   webLink={project.webLink}
                   githubLink={project.githubLink}
                   stack={project.stack}
-                  description={project.description}
+                  descriptionKey={project.descriptionKey}
                 />
               </SwiperSlide>
             ))}

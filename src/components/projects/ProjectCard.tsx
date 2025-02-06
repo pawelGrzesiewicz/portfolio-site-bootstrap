@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Card, Accordion } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import Image from 'next/image';
 import Link from 'next/link';
+import CardAccordion from './CardAccordion';
 
 type ProjectCardProps = {
     name: string;
@@ -11,7 +12,7 @@ type ProjectCardProps = {
     webLink: string;
     githubLink: string;
     stack: string[];
-    description: string;
+    descriptionKey: string;
 };
 
 export default function ProjectCard({
@@ -20,23 +21,24 @@ export default function ProjectCard({
     webLink,
     githubLink,
     stack,
-    description,
+    descriptionKey,
 }: ProjectCardProps) {
+
     return (
         <Card>
             <div className="img-wrapper">
                 <Image
                     src={img}
                     alt={name}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition="top"
+                    width={500} height={300} 
+                    style={{ objectFit: "cover", objectPosition: "top" }}
                     className="card-img-top"
+                    priority
                 />
             </div>
 
             <Card.Body className="d-flex gap-3">
-                <div className="d-flex gap-2">
+                <div className="d-flex gap-3 tech-icon">
                     {stack.map((icon, index) => (
                         <Image
                             key={index}
@@ -47,23 +49,16 @@ export default function ProjectCard({
                         />
                     ))}
                 </div>
-                <div>
-                    <Link href={webLink} target="_blank" rel="noopener noreferrer" className="mx-2">
+                <div className="d-flex gap-4">
+                    <Link href={webLink} target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-window fs-4 social-icon"></i>
                     </Link>
-                    <Link href={githubLink} target="_blank" rel="noopener noreferrer" className="mx-2">
+                    <Link href={githubLink} target="_blank" rel="noopener noreferrer">
                         <i className="bi bi-github fs-4 social-icon"></i>
                     </Link>
                 </div>
-                <div className="accordion-wrapper d-none d-md-block">
-                    <Accordion>
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Show Project Details</Accordion.Header>
-                            <Accordion.Body>
-                                {description}
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
+                <div className="accordion-wrapper">
+                    <CardAccordion descriptionKey={descriptionKey} />
                 </div>
             </Card.Body>
         </Card>
