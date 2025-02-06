@@ -29,8 +29,15 @@
     },
   
     "ProjectsPage": {
-      "text-1": "Latest projects",
-      "text-2": "View more works"
+      "heading": "Latest projects",
+      "sub-heading": "View more works",
+      "project-details": "Show Project Details",
+      "placeForFamily": "Place for Family is a web application designed to provide a space for families to organize and plan activities based on weather conditions. Users can sign up, create their family profiles, and add custom options for different weather scenarios.",
+      "hooBank": "Hoobank is a web application that provides modern and efficient banking solutions. This project is built using React and Vite, offering a seamless development experience.",
+      "bestShop": "Welcome to Best Shop Project! This is a revolutionary application that simplifies complex tasks and enhances your productivity. Whether you're a developer, designer, or someone looking for an efficient solution, Awesome Project has got you covered.",
+      "toDo": "React: JavaScript library for building user interfaces. Firebase: SDK for building web applications with real-time database functionality. Vite: Fast build tool that enhances development experience for React applications.",
+      "gpt3": "This project is a React-based web application that showcases the capabilities of OpenAI's GPT-3. The application includes various sections such as information about GPT-3, features, case studies, a blog, and more.",
+      "gerichtRestaurant": "Gerich restaurant is built with a responsive design, ensuring a seamless experience across various devices. The user interface is designed with simplicity in mind, making it easy for users to navigate and perform actions."
     },
   
     "ContactPage": {

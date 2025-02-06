@@ -4,11 +4,11 @@ import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from '@/i18n/routing';
 import InstallBootstrap from "@/utils/InstallBootstrap";
-import NavBar from "@/componets/navigation/NavBar";
-import Footer from "@/componets/Footer";
+import NavBar from "@/components/navigation/NavBar";
+import Footer from "@/components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import "../globals.css";
+import "../scss/main.scss";
 
 type LayoutProps = {
   children: React.ReactNode;

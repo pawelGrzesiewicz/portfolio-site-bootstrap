@@ -29,8 +29,15 @@
     },
   
     "ProjectsPage": {
-      "text-1": "Ostatnie Projekty",
-      "text-2": "Zobacz więcej prac"
+      "heading": "Ostatnie Projekty",
+      "sub-heading": "Zobacz więcej prac",
+      "project-details": "Szczegóły projektu",
+      "placeForFamily": "Place for Family to aplikacja internetowa zaprojektowana w celu organizowania i planowania aktywności rodzinnych na podstawie warunków pogodowych. Użytkownicy mogą się zarejestrować, tworzyć profile rodzinne i dodawać opcje dostosowane do różnych scenariuszy pogodowych.",
+      "hooBank": "Hoobank to aplikacja internetowa oferująca nowoczesne i wydajne rozwiązania bankowe. Projekt oparty jest na React i Vite, oferując płynne doświadczenie deweloperskie.",
+      "bestShop": "Witamy w projekcie Best Shop! To rewolucyjna aplikacja, która upraszcza skomplikowane zadania i zwiększa produktywność. Niezależnie od tego, czy jesteś deweloperem, projektantem, czy szukasz efektywnego rozwiązania, Best Shop ma wszystko, czego potrzebujesz.",
+      "toDo": "React: Biblioteka JavaScript do tworzenia interfejsów użytkownika. Firebase: SDK do budowy aplikacji internetowych z funkcjonalnością bazy danych w czasie rzeczywistym. Vite: Szybkie narzędzie do budowy, które przyspiesza proces deweloperski aplikacji React.",
+      "gpt3": "Ten projekt to aplikacja internetowa oparta na React, która prezentuje możliwości GPT-3 od OpenAI. Aplikacja zawiera różne sekcje, takie jak informacje o GPT-3, funkcje, studia przypadków, blog i inne.",
+      "gerichtRestaurant": "Restauracja Gerich została stworzona w responsywnym designie, zapewniając płynne doświadczenie na różnych urządzeniach. Interfejs użytkownika jest zaprojektowany z myślą o prostocie, co ułatwia nawigację i wykonywanie działań."
     },
   
     "ContactPage": {

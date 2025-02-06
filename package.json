@@ -16,6 +16,7 @@
     "react": "^19.0.0",
     "react-bootstrap": "^2.10.7",
     "react-dom": "^19.0.0",
+    "swiper": "^11.2.2",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
@@ -25,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
+    "sass": "^1.83.4",
     "typescript": "^5"
   }
 }
