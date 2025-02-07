@@ -13,7 +13,10 @@ export default function GetCv() {
                 target="_blank"
                 rel="noreferrer"
             >
-                <Button variant="outline-warning" className="px-4 py-2 opacity-75 pulsating-button">
+                <Button
+                    variant="outline-warning"
+                    className="btn-cv px-4 py-2"
+                >
                     {t('getCv')}
                 </Button>
             </Link>

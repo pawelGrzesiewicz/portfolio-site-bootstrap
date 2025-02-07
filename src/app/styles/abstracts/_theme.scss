@@ -1,0 +1,13 @@
+html {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+:root {
+  --primary-color: #A67F76;
+  --text-color: #5A3E3B;
+}
+
+html[data-bs-theme="dark"] {
+  --primary-color: #5A3E3B;
+  --text-color: #A67F76;
+}

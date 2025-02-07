@@ -20,14 +20,14 @@ export default function SwitchLanguageMode({ locale }: SwitchLanguageModeProps) 
     <ButtonGroup size="sm" aria-label="Toggle dark mode">
       <Button
         variant="outline-secondary"
-        className={`${locale === "en" ? 'bg-secondary' : ''}`}
+        className={`btn-lang ${locale === "en" ? 'en' : ''}`}
         onClick={() => handleLanguageChange("en")}
       >
         <span className={`${locale === "en" ? 'text-warning' : ''}`}>EN</span>
       </Button>
       <Button
         variant="outline-secondary"
-        className={`${locale === "pl" ? 'bg-secondary' : ''}`}
+        className={`btn-lang ${locale === "pl" ? 'pl' : ''}`}
         onClick={() => handleLanguageChange("pl")}
       >
         <span className={`${locale === "pl" ? 'text-warning' : ''}`}>PL</span>

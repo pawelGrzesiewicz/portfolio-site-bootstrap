@@ -1,0 +1,61 @@
+@use "../abstracts/functions" as *;
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.animated-arrow {
+  animation: moveArrow 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveArrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+.swiper {
+  max-height: px-to-rem(600px);
+
+  .card {
+    margin: 1rem;
+    border: none;
+    background-color: transparent !important;
+    -webkit-box-shadow: 0px 3px 11px -2px rgb(48, 43, 25);
+        -moz-box-shadow: 0px 3px 11px -2px rgb(52, 48, 29);
+        box-shadow: 0px 3px 11px -2px rgb(66, 62, 48);
+
+
+      [data-bs-theme="dark"] & {
+        -webkit-box-shadow: 0px 3px 11px -2px rgb(48, 43, 25);
+        -moz-box-shadow: 0px 3px 11px -2px rgb(52, 48, 29);
+        box-shadow: 0px 3px 11px -2px rgb(66, 62, 48);
+      }
+
+    .img-wrapper {
+      margin: 0 auto;
+      border-radius: px-to-rem(6px);
+      width: 100%;
+      height: px-to-rem(450px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: px-to-rem(6px);
+      }
+    }
+
+    .card-body {
+      @include flex(center, start);
+      flex-direction: column;
+      padding: 0.5rem;
+
+      .card-icons {
+        @include flex(space-between, center);
+        width: 100%;
+      }
+    }
+  }
+}

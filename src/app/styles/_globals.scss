@@ -1,0 +1,77 @@
+@use "./abstracts/variables" as *;
+@use "./components/navBar";
+@use "./components/switchDarkMode";
+@use "./components/switchLanguageMode";
+@use "./components/getCV.scss";
+@use "./components/projectCard";
+@use "./components/projectAccordion";
+
+.text-gradient {
+    background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #B95F20, #E9B251);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@media (min-width: 576px) {
+    html[data-bs-theme='light'] .bg-face-web {
+        background: url('/bg 2.png') center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    html[data-bs-theme='dark'] .bg-face-web {
+        background: url('/bg.jpg') center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 575px) {
+    html[data-bs-theme='dark'] .bg-face-mobile {
+        background: url('/bg-mobile.jpg') center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    html[data-bs-theme='light'] .bg-face-mobile {
+        background: url('/bg-mobile-light.png') center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+html[data-bs-theme='light'] .tech-icon {
+    filter: invert(100%);
+}
+
+html[data-bs-theme='dark'] .tech-icon {
+    filter: invert(0%);
+}
+
+.tech-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.social-icon {
+    color: rgba($primary-light, 0.8);
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    color: $primary-light;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(245, 197, 24, 0.5);
+    }
+    70% {
+        box-shadow: 0 0 20px 10px rgba(245, 197, 24, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(245, 197, 24, 0);
+    }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as *;
+
+.btn-cv {
+    border: 1px solid rgba($primary-light, 0.8) !important;
+    border-radius: 20px !important;
+    animation: pulse 1.5s infinite;
+    color: rgba($primary-dark, 0.8) !important;
+
+    &:hover {
+        background-color: rgba($primary-light, 0.4) !important;
+    }
+}

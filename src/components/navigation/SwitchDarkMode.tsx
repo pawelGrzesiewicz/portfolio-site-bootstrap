@@ -1,42 +1,40 @@
 'use client';
 
 import { ThemeContext } from '@/context/ThemeContextProvider';
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Button, ButtonGroup } from 'react-bootstrap';
 
 export default function SwitchDarkMode() {
-  const { toggleTheme } = useContext(ThemeContext);
-
-  const [isDark, setIsDark] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    setIsDark(savedTheme === 'dark');
-    toggleTheme(savedTheme as "dark" | "light");
-  }, [toggleTheme]);
+    const savedTheme = (localStorage.getItem('theme') as "dark" | "light") || 'light';
+    if (savedTheme !== theme) {
+      toggleTheme(savedTheme);
+    }
+  }, [theme, toggleTheme]);
 
   function handleThemeChange(newTheme: "dark" | "light") {
     localStorage.setItem('theme', newTheme);
     toggleTheme(newTheme);
-    setIsDark(newTheme === "dark");
   }
 
   return (
     <ButtonGroup size="sm" aria-label="Toggle dark mode">
       <Button
         variant="outline-secondary"
-        className={`${isDark === true ? 'bg-secondary' : ''}`}
+        className={`btn-theme ${theme === 'dark' ? 'dark' : ''}`}
         onClick={() => handleThemeChange("dark")}
       >
-        <i className={`bi bi-moon ${isDark === true ? 'text-warning' : ''}`}></i>
+        <i className="bi bi-moon"></i>
       </Button>
       <Button
         variant="outline-secondary"
-        className={`${isDark === false ? 'bg-secondary' : ''}`}
+        className={`btn-theme ${theme === 'light' ? 'light' : ''}`}
         onClick={() => handleThemeChange("light")}
       >
-        <i className={`bi bi-brightness-high ${isDark === false ? 'text-warning' : ''}`}></i>
+        <i className="bi bi-brightness-high"></i>
       </Button>
     </ButtonGroup>
-  )
+  );
 }

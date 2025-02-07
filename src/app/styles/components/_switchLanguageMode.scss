@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.btn-lang {
+    border: 1px solid rgba($primary-light, 0.8) !important;
+
+    &:hover {
+        background-color: rgba($primary-light, 0.4) !important;
+    }
+
+    &.pl {
+        background-color: rgba($primary-light, 0.8);
+        color: $primary-dark;
+    }
+
+    &.en {
+        background-color: rgba($primary-light, 0.8);
+        color: $primary-dark;
+    }
+}

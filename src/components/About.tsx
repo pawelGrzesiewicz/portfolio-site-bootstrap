@@ -12,9 +12,9 @@ export default function About() {
     <Container fluid="xxl">
       <Row>
         <Col xs={12} md={8} xl={6} className="text-start px-3 px-md-5">
-          <h1>{t('text-1')}</h1>
-          <h3>{t('text-2')}</h3>
-          <h4 className='text-gradient'>{t('text-3')}</h4>
+          <h2 className='display-6'>{t('text-1')}</h2>
+          <h1 className="display-1 fw-bold mb-3">{t('text-2')}</h1>
+          <h2 className='text-gradient display-6'>{t('text-3')}</h2>
           <p>{t('description')}</p>
           <GetCv />
         </Col>

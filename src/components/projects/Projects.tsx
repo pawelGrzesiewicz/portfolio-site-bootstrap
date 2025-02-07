@@ -26,19 +26,20 @@ export default function Projects() {
 
   return (
     <Container fluid="xxl">
-      <Row className="text-center mb-2">
-        <Col sm={8} md={10} lg={8} >
-          <h1>{t('heading')}</h1>
-          <div className="d-flex d-md-none align-items-center justify-content-center gap-3 text-gradient">
-            <p className="mb-0">{t('sub-heading')}</p>
-            <i className="bi bi-hand-index-thumb-fill text-gradient position-relative animated-arrow"></i>
+      <Row className="text-center">
+        <Col sm={8} md={10} lg={8}>
+          <h1 className="display-4 fw-bold mb-3">{t('heading')}</h1>
+          <div className="d-flex align-items-center justify-content-center">
+            <i className="bi bi-arrow-left-square fs-2 swiper-prev cursor-pointer d-none d-md-flex social-icon"></i>
+            <h2 className="mx-3 mx-md-5  display-6 text-gradient">{t('sub-heading')}</h2>
+            <i className="bi bi-hand-index-thumb-fill text-gradient animated-arrow d-block d-md-none"></i>
+            <i className="bi bi-arrow-right-square fs-2 swiper-next cursor-pointer d-none d-md-flex social-icon"></i>
           </div>
         </Col>
       </Row>
 
       <Row className='d-flex justify-content-start p-sm-3'>
-        <Col sm={8} md={10} lg={8} className="position-relative">
-          <i className="bi bi-arrow-left-square fs-2 swiper-prev position-absolute start-0 top-50 translate-middle-y cursor-pointer d-none d-md-block social-icon"></i>
+        <Col sm={8} md={10} lg={8}>
           <Swiper
             spaceBetween={30}
             slidesPerView={slidesPerView}
@@ -60,7 +61,6 @@ export default function Projects() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <i className="bi bi-arrow-right-square fs-2 swiper-next position-absolute end-0 top-50 translate-middle-y cursor-pointer d-none d-md-block social-icon"></i>
         </Col>
       </Row>
     </Container >

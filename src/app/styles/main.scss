@@ -1,0 +1,5 @@
+@use "./globals";
+@use "./abstracts/variables";  
+@use "./abstracts/variables" as *;
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";

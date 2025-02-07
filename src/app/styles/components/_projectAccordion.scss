@@ -1,0 +1,72 @@
+@use "../abstracts/variables" as *;
+
+.accordion-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .accordion {
+    .accordion-item {
+      overflow: hidden;
+      border: none;
+
+      .accordion-button {
+        white-space: nowrap;
+        background-color: rgba($primary-light, 0.6);
+        color: rgba($primary-light, 0.8);
+        transition: opacity 0.3s ease, transform 0.2s ease;
+        cursor: pointer;
+
+        [data-bs-theme="dark"] & {
+          background-color: rgba($primary-light, 0.4);
+          color: rgba($primary-light, 0.8);
+        }
+
+        &:focus {
+          box-shadow: none !important;
+          outline: none !important;
+          color: rgba($primary-light, 0.8);
+        }
+
+        &::after {
+          filter: invert(32%) sepia(85%) saturate(650%) hue-rotate(10deg) brightness(90%) contrast(105%);
+
+          [data-bs-theme="dark"] & {
+            filter: invert(32%) sepia(85%) saturate(650%) hue-rotate(10deg) brightness(90%) contrast(105%);
+          }
+        }
+
+        &:hover {
+          color: $primary-light;
+          &::after {
+            color: $primary-light;
+          }
+
+          [data-bs-theme="dark"] & {
+            background-color: rgba($primary-light, 0.4);
+            color: rgba($primary-light, 0.8);
+          }
+        }
+      }
+
+      .accordion-button:not(.collapsed) {
+        // background-color: $warm-gray-light;
+
+        [data-bs-theme="dark"] & {
+          // background-color: $warm-gray-dark;
+        }
+      }
+
+      .accordion-body {
+        // background-color: $warm-gray-dark;
+        // color: $warm-gray-light;
+
+        [data-bs-theme="dark"] & {
+          // background-color: $warm-gray-light;
+          // color: $warm-gray-dark;
+        }
+      }
+    }
+  }
+}

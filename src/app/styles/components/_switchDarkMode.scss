@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.btn-theme {
+    border: 1px solid rgba($primary-light, 0.8) !important;
+
+    &:hover {
+        background-color: rgba($primary-light, 0.4) !important;
+    }
+
+    &.dark {
+        background-color: rgba($primary-light, 0.8);
+        color: $primary-dark;
+    }
+
+    &.light {
+        background-color: rgba($primary-light, 0.8);
+        color: $primary-dark;
+    }
+}
