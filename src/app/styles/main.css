@@ -39,7 +39,7 @@
     flex-direction: nowrap;
     gap: 1rem;
   }
-  .offcanvas .offcanvas-body .nav-link:focus {
+  .offcanvas .offcanvas-body .nav-link:focus, .offcanvas .offcanvas-body .nav-link:active {
     color: #E9B251;
   }
   .offcanvas .offcanvas-body .ms-auto {

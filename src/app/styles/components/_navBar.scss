@@ -43,7 +43,8 @@
       }
 
       .nav-link {
-        &:focus{
+        &:focus,
+        &:active{
           color: $primary-dark;
         }
       }
