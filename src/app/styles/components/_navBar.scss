@@ -2,6 +2,16 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+.scroll-bg {
+  transition: background-color 0.3s ease;
+  [data-bs-theme="dark"] & {
+    background-color: $text-light !important;
+  }
+  [data-bs-theme="light"] & {
+    background-color: $text-dark !important;
+  }
+}
+
 .navbar-toggler.collapsed {
   border: none;
   font-size: 1.25rem;

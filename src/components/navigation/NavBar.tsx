@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslations } from "next-intl";
 import { Navbar, Container, Offcanvas, Nav } from 'react-bootstrap';
 import SwitchDarkMode from './SwitchDarkMode';
@@ -15,8 +15,25 @@ type NavBarProps = {
 export default function NavBar({ locale }: NavBarProps) {
   const t = useTranslations("NavbarLinks");
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
   return (
-    <Navbar expand="lg" fixed="top" className="mb-3">
+    <Navbar expand="lg" fixed="top" className={`mb-3 ${isScrolled ? 'scroll-bg' : ''}`}>
       <Container fluid="xxl">
         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-lg`}>
           <Logo/>

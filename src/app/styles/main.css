@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.scroll-bg {
+  transition: background-color 0.3s ease;
+}
+[data-bs-theme=dark] .scroll-bg {
+  background-color: #1B1E16 !important;
+}
+[data-bs-theme=light] .scroll-bg {
+  background-color: #FAF9F9 !important;
+}
+
 .navbar-toggler.collapsed {
   border: none;
   font-size: 1.25rem;

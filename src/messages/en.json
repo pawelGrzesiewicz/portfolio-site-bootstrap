@@ -1,53 +1,48 @@
 {
-    "NavbarLinks": {
-      "home": "Home",
-      "homeTitle": "Home page",
-      "about": "About",
-      "aboutTitle": "About page",
-      "projects": "Projects",
-      "projectsTitle": "Projects page",
-      "contact": "Contact",
-      "contactTitle": "Contact page",
-      "blog": "Blog",
-      "blogTitle": "Blog page"
-    },
-  
-    "HomePage": {
-      "text-1": "Hi There !",
-      "text-2": "I'm Paweł",
-      "text-3": "I'm ",
-      "typed-text-1": "Web Developer",
-      "typed-text-2": "Web Designer"
-    },
-  
-    "AboutPage": {
-      "text-1": "About Me",
-      "text-2": "Who am I ?",
-      "text-3": "I'm Frontend Developer",
-      "description" : "After years of honing my skills as a technical manager and designer, I finally let myself be captivated by programming. Writing code brings me joy. I love fixing stubborn bugs and experiencing those magical moments of enlightenment when, after hours of debugging, I manage to write that one line that makes the code work \uD83D\uDE09 Currently, I am focusing on developing programming skills in JavaScript and React/Next.js. It's a fascinating environment that gives me the opportunity to create interactive and dynamic web applications. I'm delighted to expand my knowledge and gain experience in the coding world.",
-      "getCv": "Download CV"
-    },
-  
-    "ProjectsPage": {
-      "heading": "Latest projects",
-      "sub-heading": "View more works",
-      "project-details": "Show Project Details",
-      "placeForFamily": "Place for Family is a web application designed to provide a space for families to organize and plan activities based on weather conditions. Users can sign up, create their family profiles, and add custom options for different weather scenarios.",
-      "hooBank": "Hoobank is a web application that provides modern and efficient banking solutions. This project is built using React and Vite, offering a seamless development experience.",
-      "bestShop": "Welcome to Best Shop Project! This is a revolutionary application that simplifies complex tasks and enhances your productivity. Whether you're a developer, designer, or someone looking for an efficient solution, Awesome Project has got you covered.",
-      "toDo": "React: JavaScript library for building user interfaces. Firebase: SDK for building web applications with real-time database functionality. Vite: Fast build tool that enhances development experience for React applications.",
-      "gpt3": "This project is a React-based web application that showcases the capabilities of OpenAI's GPT-3. The application includes various sections such as information about GPT-3, features, case studies, a blog, and more.",
-      "gerichtRestaurant": "Gerich restaurant is built with a responsive design, ensuring a seamless experience across various devices. The user interface is designed with simplicity in mind, making it easy for users to navigate and perform actions."
-    },
-  
-    "ContactPage": {
-      "text-1": "Say hello!",
-      "text-2": "Contact me",
-      "text-3": "I love making new connections with people.",
-      "text-4": "Feel free to drop me an email."
-    },
-  
-    "Footer": {
-      "text": "All Rights Reserved."
-    }
+  "NavbarLinks": {
+    "home": "Home",
+    "homeTitle": "Home page",
+    "about": "About",
+    "aboutTitle": "About page",
+    "projects": "Projects",
+    "projectsTitle": "Projects page",
+    "contact": "Contact",
+    "contactTitle": "Contact page",
+    "blog": "Blog",
+    "blogTitle": "Blog page"
+  },
+  "HomePage": {
+    "text-1": "Hi There !",
+    "text-2": "I'm Paweł",
+    "text-3": "I'm ",
+    "typed-text-1": "Web Developer",
+    "typed-text-2": "Web Designer"
+  },
+  "AboutPage": {
+    "text-1": "About Me",
+    "text-2": "Who am I ?",
+    "text-3": "I'm Frontend Developer",
+    "description": "After years of honing my skills as a technical manager and designer, I finally let myself be captivated by programming.\n\nWriting code brings me joy. I love fixing stubborn bugs and experiencing those magical moments of enlightenment when, after hours of debugging, I manage to write that one line that makes the code work. 😉\n\nCurrently, I am focusing on developing programming skills in JavaScript and React/Next.js. It's a fascinating environment that gives me the opportunity to create interactive and dynamic web applications.\n\nI'm delighted to expand my knowledge and gain experience in the coding world.",
+    "getCv": "Download CV"
+  },
+  "ProjectsPage": {
+    "heading": "Latest projects",
+    "sub-heading": "View more works",
+    "project-details": "Show Project Details",
+    "placeForFamily": "Place for Family is a web application designed to provide a space for families to organize and plan activities based on weather conditions. Users can sign up, create their family profiles, and add custom options for different weather scenarios.",
+    "hooBank": "Hoobank is a web application that provides modern and efficient banking solutions. This project is built using React and Vite, offering a seamless development experience.",
+    "bestShop": "Welcome to Best Shop Project! This is a revolutionary application that simplifies complex tasks and enhances your productivity. Whether you're a developer, designer, or someone looking for an efficient solution, Awesome Project has got you covered.",
+    "toDo": "React: JavaScript library for building user interfaces. Firebase: SDK for building web applications with real-time database functionality. Vite: Fast build tool that enhances development experience for React applications.",
+    "gpt3": "This project is a React-based web application that showcases the capabilities of OpenAI's GPT-3. The application includes various sections such as information about GPT-3, features, case studies, a blog, and more.",
+    "gerichtRestaurant": "Gerich restaurant is built with a responsive design, ensuring a seamless experience across various devices. The user interface is designed with simplicity in mind, making it easy for users to navigate and perform actions."
+  },
+  "ContactPage": {
+    "text-1": "Say hello!",
+    "text-2": "Contact me",
+    "text-3": "I love making new connections with people.",
+    "text-4": "Feel free to drop me an email."
+  },
+  "Footer": {
+    "text": "All Rights Reserved."
   }
+}

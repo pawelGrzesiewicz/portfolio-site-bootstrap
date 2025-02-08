@@ -43,7 +43,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
           <ThemeContextProvider>
             <InstallBootstrap />
             <NavBar locale={locale} />
-            <main className='d-flex flex-grow-1 justify-content-center align-items-center pt-5'>
+            <main className='d-flex flex-grow-1 justify-content-center align-items-center mt-5'>
               {children}
             </main>
             <Footer />

@@ -25,7 +25,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <Container fluid="xxl">
+    <Container fluid="xxl" className="pt-5 pt-md-0">
       <Row className="text-center">
         <Col sm={8} md={10} lg={8}>
           <h1 className="display-4 fw-bold mb-3">{t('heading')}</h1>
