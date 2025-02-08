@@ -1,13 +1,12 @@
-'use client'
+'use client';
 
-import { useEffect } from 'react'
+import { useEffect } from 'react';
 
 export default function InstallBootstrap() {
-    useEffect(() => {
-        // @ts-ignore
-        import("bootstrap/dist/js/bootstrap.bundle.js");
-      }, []);
+  useEffect(() => {
+    // @ts-expect-error Bootstrap does not have TypeScript support for dynamic import
+    import('bootstrap/dist/js/bootstrap.bundle.js');
+  }, []);
 
-      return <></>
+  return null;
 }
-
