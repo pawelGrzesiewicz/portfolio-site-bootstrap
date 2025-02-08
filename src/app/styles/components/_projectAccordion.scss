@@ -49,24 +49,6 @@
           }
         }
       }
-
-      .accordion-button:not(.collapsed) {
-        // background-color: $warm-gray-light;
-
-        [data-bs-theme="dark"] & {
-          // background-color: $warm-gray-dark;
-        }
-      }
-
-      .accordion-body {
-        // background-color: $warm-gray-dark;
-        // color: $warm-gray-light;
-
-        [data-bs-theme="dark"] & {
-          // background-color: $warm-gray-light;
-          // color: $warm-gray-dark;
-        }
-      }
     }
   }
 }

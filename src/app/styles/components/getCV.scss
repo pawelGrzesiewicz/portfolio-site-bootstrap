@@ -1,8 +1,9 @@
+@use "../abstracts/functions" as *;
 @use "../abstracts/variables" as *;
 
 .btn-cv {
     border: 1px solid rgba($primary-light, 0.8) !important;
-    border-radius: 20px !important;
+    border-radius: px-to-rem(20px) !important;
     animation: pulse 1.5s infinite;
     color: rgba($primary-dark, 0.8) !important;
 

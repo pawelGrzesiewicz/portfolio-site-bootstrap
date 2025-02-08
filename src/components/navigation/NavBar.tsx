@@ -34,7 +34,7 @@ export default function NavBar({ locale }: NavBarProps) {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Nav className="justify-content-end flex-grow-1 pe-3 nav-collaps">
               <Link href={`/${locale}/`} className="nav-link" aria-label="Go to Home">
                 {t('home')}
               </Link>

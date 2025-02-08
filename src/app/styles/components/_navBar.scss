@@ -1,4 +1,6 @@
+@use "../abstracts/functions" as *;
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .navbar-toggler.collapsed {
   border: none;
@@ -9,6 +11,41 @@
 .navbar-toggler-icon:focus {
   box-shadow: none;
   outline: none;
+}
+
+.offcanvas {
+  background-color: $seccondary-light !important;
+  @media (max-width: 991px) {
+    .btn-close {
+      &.active,
+      &:focus {
+        color: $primary-dark;
+        box-shadow: none;
+        outline: none;
+  }
+    }
+    .offcanvas-body {
+      padding-top: px-to-rem(40px);
+
+      .nav-collaps {
+        @include flex (center, center);
+        gap: 1rem;
+      }
+
+      .nav-link {
+        &:focus{
+          color: $primary-dark;
+        }
+      }
+
+      .ms-auto {
+        margin-top: px-to-rem(20px);
+        width: 100%;
+        @include flex (center, center);
+        gap: 1rem;
+      }
+    }
+  }
 }
 
 .nav-link {
@@ -38,17 +75,6 @@
     &:active::before {
       width: 100%;
       visibility: visible;
-    }
-  }
-
-  @media (max-width: 991px) {
-    &::before {
-      content: none;
-    }
-
-    &:hover,
-    &:active {
-      color: #f3b807;
     }
   }
 }

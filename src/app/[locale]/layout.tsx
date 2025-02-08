@@ -1,3 +1,4 @@
+import { Source_Code_Pro } from 'next/font/google';
 import ThemeContextProvider from "@/context/ThemeContextProvider";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from "next-intl/server";
@@ -22,6 +23,11 @@ export async function generateMetadata() {
   };
 }
 
+const sourceCodePro = Source_Code_Pro({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+});
+
 export default async function RootLayout({ children, params }: LayoutProps) {
   const { locale } = await params;
 
@@ -32,7 +38,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
 
   return (
     <html lang={locale}>
-      <body className='d-flex flex-column min-vh-100 bg-face-web bg-face-mobile'>
+      <body className={`${sourceCodePro.className} d-flex flex-column min-vh-100 bg-face-web bg-face-mobile`}>
         <NextIntlClientProvider messages={messages}>
           <ThemeContextProvider>
             <InstallBootstrap />

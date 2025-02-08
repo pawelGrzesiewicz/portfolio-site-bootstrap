@@ -10,6 +10,39 @@
   outline: none;
 }
 
+.offcanvas {
+  background-color: #8E8871 !important;
+}
+@media (max-width: 991px) {
+  .offcanvas .btn-close.active, .offcanvas .btn-close:focus {
+    color: #E9B251;
+    box-shadow: none;
+    outline: none;
+  }
+  .offcanvas .offcanvas-body {
+    padding-top: 2.5rem;
+  }
+  .offcanvas .offcanvas-body .nav-collaps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: nowrap;
+    gap: 1rem;
+  }
+  .offcanvas .offcanvas-body .nav-link:focus {
+    color: #E9B251;
+  }
+  .offcanvas .offcanvas-body .ms-auto {
+    margin-top: 1.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: nowrap;
+    gap: 1rem;
+  }
+}
+
 .nav-link {
   font-weight: 500;
   position: relative;
@@ -33,14 +66,6 @@
   .nav-link:hover::before, .nav-link:active::before {
     width: 100%;
     visibility: visible;
-  }
-}
-@media (max-width: 991px) {
-  .nav-link::before {
-    content: none;
-  }
-  .nav-link:hover, .nav-link:active {
-    color: #f3b807;
   }
 }
 
@@ -76,7 +101,7 @@
 
 .btn-cv {
   border: 1px solid rgba(185, 95, 32, 0.8) !important;
-  border-radius: 20px !important;
+  border-radius: 1.25rem !important;
   animation: pulse 1.5s infinite;
   color: rgba(233, 178, 81, 0.8) !important;
 }
@@ -181,6 +206,7 @@
   background-color: rgba(185, 95, 32, 0.4);
   color: rgba(185, 95, 32, 0.8);
 }
+
 .text-gradient {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #B95F20, #E9B251);
   -webkit-background-clip: text;
@@ -190,7 +216,7 @@
 
 @media (min-width: 576px) {
   html[data-bs-theme=light] .bg-face-web {
-    background: url("/bg 2.png") center;
+    background: url("/bg-light.png") center;
     background-size: cover;
     background-repeat: no-repeat;
   }

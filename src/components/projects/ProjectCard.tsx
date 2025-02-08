@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card, CardText, CardTitle } from 'react-bootstrap';
+import { Card, CardText } from 'react-bootstrap';
 import Image from 'next/image';
 import Link from 'next/link';
 import CardAccordion from './ProjectAccordion';
